@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.tarmantar.deacceldebug.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Debug App for connecting to MPU6050 and other sensors over WiFi"
+        android:id="@+id/textView" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PING"
+        android:id="@+id/pingButton"
+        android:layout_below="@+id/connectButton"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Connect"
+        android:id="@+id/connectButton"
+        android:layout_below="@+id/textView"
+        android:layout_alignEnd="@+id/textView" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ACCEL ONE"
+        android:id="@+id/accelButton"
+        android:layout_alignTop="@+id/pingButton"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="STREAM ACCEL"
+        android:id="@+id/textView2"
+        android:textSize="30dp"
+        android:textIsSelectable="true"
+        android:layout_alignBottom="@+id/toggleButton"
+        android:layout_alignParentStart="true" />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New ToggleButton"
+        android:id="@+id/toggleButton"
+        android:checked="false"
+        android:layout_below="@+id/accelButton"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/flashTopEditText"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/flashBottomEditText"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addressEditText"
+        android:layout_alignTop="@+id/connectButton"
+        android:layout_alignParentStart="true"
+        android:layout_alignBottom="@+id/connectButton"
+        android:layout_toStartOf="@+id/connectButton"
+        android:layout_alignEnd="@+id/textView2"
+        android:layout_marginEnd="56dp"
+        android:singleLine="true"
+        android:text="192.168.1.107" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/portEditText"
+        android:layout_alignBottom="@+id/connectButton"
+        android:layout_alignStart="@+id/accelButton"
+        android:layout_marginStart="39dp"
+        android:layout_toStartOf="@+id/connectButton"
+        android:singleLine="true"
+        android:text="8888" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Results...."
+        android:id="@+id/resultTextView"
+        android:layout_above="@+id/flashBottomEditText"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/flashTopEditText"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
